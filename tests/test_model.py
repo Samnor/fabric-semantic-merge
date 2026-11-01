@@ -7,6 +7,24 @@ from .support import model
 
 
 class ModelTests(unittest.TestCase):
+    def test_measure_column_collision_introduced_by_union_is_blocked(self):
+        left, right = model("Revenue"), model("Count")
+        right["bim"]["model"]["tables"][0]["columns"][0]["name"] = "revenue"
+        result = merge_models(left, right, "Merged")
+        self.assertFalse(result["ready"])
+        self.assertTrue(
+            any(
+                "Measure and column share a name" in issue for issue in result["issues"]
+            )
+        )
+
+    def test_same_column_name_in_another_measure_home_table_is_allowed(self):
+        left, right = model("Revenue"), model("Count")
+        right["bim"]["model"]["tables"].append(
+            {"name": "Other", "columns": [{"name": "Revenue", "dataType": "int64"}]}
+        )
+        self.assertTrue(merge_models(left, right, "Merged")["ready"])
+
     def test_invalid_calculated_output_column_is_blocked_before_live_creation(self):
         left, right = model(), model("Count")
         for value in (left, right):

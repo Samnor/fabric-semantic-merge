@@ -70,6 +70,8 @@ Use `--resolutions PATH.json` for reviewed JSON-pointer resolutions. For example
 
 For shared objects, a setting present in only one source also requires review: omission can represent a meaningful default. Conflicts include `left_present`/`right_present` so omission is distinct from JSON null. A `take` resolution can explicitly preserve the selected source's omission. Known additive object collections and lineage metadata remain supported without guessing other defaults.
 
+A measure cannot reuse a column name in its own table. The validator rejects case-insensitive collisions introduced by the union before model creation.
+
 An access policy is required before creating the new model. Copy `examples/security-policy.json`, review the actual source ACLs, target workspace access, combined data audience and sensitivity labels, and set the review flags only when appropriate. Supply explicit desired User/Group grants rather than blindly unioning audiences. Source labels are not part of `model.bim`, so the policy explicitly specifies `label_id` (UUID or null). A target differing from any labeled source requires literal `label_change_approved: true`, including choosing one original's label when the two originals disagree. Source label changes after planning block deployment.
 
 ```sh

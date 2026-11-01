@@ -306,6 +306,14 @@ def validate_model(bim):
                     issues.append("Duplicate " + collection + " name: " + item["name"])
                 seen.add(name)
         columns = {c["name"].casefold(): c for c in table.get("columns", [])}
+        for measure in table.get("measures", []):
+            if measure["name"].casefold() in columns:
+                issues.append(
+                    "Measure and column share a name in the same table: "
+                    + table["name"]
+                    + "."
+                    + measure["name"]
+                )
         calculated_table = any(
             p.get("source", {}).get("type") == "calculated"
             for p in table.get("partitions", [])
