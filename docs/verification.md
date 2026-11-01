@@ -23,11 +23,13 @@ The demo produces a fresh plan, hash-chained journal and results for a simulated
 
 Maintainer-run disposable calibration on 1 November 2026 passed auto/enhanced and standard refresh on a dedicated Fabric trial workspace. It used one fixed Sales table containing 10 and 20, disjoint SUM/COUNTROWS measures and two empty reports. Each path passed six probes with 24 repeated observations, switched two report bindings and restored them. Successful owned resources were deleted once and observed absent through exact-ID GET-404 receipts. Initial fixture/standard-refresh tracking failures were reconciled separately without replaying mutations.
 
+A later public Web/Excel cohort used an independently parsed immutable workbook, 200 Sales rows, 11 territories, a relationship and disjoint Revenue/Units measures. It passed ten repeated parity probes (40 DAX calls) and fresh cutover validation, then rendered both saved country-table reports correctly before merge, after merge and after rollback. All three models, two reports and the disposable anonymous Web connection were deleted once and verified absent. The actual public Git commit was installed into a fresh environment for that cohort.
+
 These are maintainer-reported observations: raw tenant receipts, identities and historical study runners remain private and are not included in this repository or the package. [Pilot notes](pilots.md) explain scope and how to plan independent qualification. Live evidence does not certify arbitrary customer tenants.
 
 ## Remaining limits
 
-- External cloud/gateway connections, effective-user RLS/OLS, cross-workspace live migration, populated report rendering, large models and real shared-capacity deployment remain unqualified.
+- Cloud connectors and credentials beyond the single anonymous Web/Excel path, gateways, effective-user RLS/OLS, cross-workspace live migration, complex visuals/interactions, large models and real shared-capacity deployment remain unqualified.
 - API binding readback does not prove every visual or slicer. Default aggregates do not prove universal semantic equivalence; add reviewed report contexts and effective-user tests.
 - Concurrent GET/POST operations cannot exclude an external writer. Keep exclusive operational control of report bindings and of target refresh submissions used for history-delta tracking.
 - Definitions and DAX observations are sequential, not atomic data snapshots. Stabilize data or use a common reviewed snapshot.
@@ -36,4 +38,4 @@ These are maintainer-reported observations: raw tenant receipts, identities and 
 - Capacity/license, write/build/connection permissions and service settings must be verified for the selected deployment. A metadata pass cannot guarantee subsequent write success.
 - Existing source refresh schedules remain active. Merging alone does not establish CU savings, billing savings or freshness parity. Billing was not measured.
 
-Runtime uses the standard library and separately installed Azure CLI. CI is configured for Python 3.11–3.14 on Linux, a macOS test job and a Windows installation smoke check. Configured CI targets are not remote results until those jobs run. Platform filesystem permissions differ; protect private run folders with appropriate local access controls.
+Runtime uses the standard library and separately installed Azure CLI. GitHub CI passed the 181-test suite on Python 3.11–3.14/Linux and Python 3.14/macOS, a Windows installation smoke check, and distribution/exact-Git installation checks for commit `6aa8dff`. These are specific job results, not a guarantee for every platform configuration. Platform filesystem permissions differ; protect private run folders with appropriate local access controls.

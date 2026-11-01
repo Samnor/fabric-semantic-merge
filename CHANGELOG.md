@@ -2,6 +2,7 @@
 
 ## 0.1.0 — unreleased
 
+- Qualify one anonymous Web/Excel Import path with independent data oracles, populated report rendering, migration, rollback and verified disposable cleanup.
 - Install directly from a GitHub URL with pip; pin a reviewed commit for repeatability.
 - Recheck fresh source/target answers before unfinished cutover attempts, with a combined query budget and failure receipts.
 - Treat omitted settings on shared objects as explicit conflicts instead of guessing defaults; resolutions can preserve omission.
