@@ -1,0 +1,24 @@
+[
+  {
+    "name": "left:measure:Sales:Quantity",
+    "source": "left",
+    "query": "EVALUATE ROW(\"Value\", 'Sales'[Quantity] )",
+    "comparison": {
+      "mode": "keyed_numeric",
+      "key_columns": [],
+      "absolute_tolerance": "0.000001",
+      "relative_tolerance": "0.000000001"
+    }
+  },
+  {
+    "name": "left:grouped-quantity",
+    "source": "left",
+    "query": "EVALUATE SUMMARIZECOLUMNS('Sales'[Value], \"Observed\", 'Sales'[Quantity])",
+    "comparison": {
+      "mode": "keyed_numeric",
+      "key_columns": ["Sales[Value]"],
+      "absolute_tolerance": "0.000001",
+      "relative_tolerance": "0.000000001"
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "left": {
+      "workspace_id": "10000000-0000-0000-0000-000000000001",
+      "id": "20000000-0000-0000-0000-000000000001",
+      "status": "observed",
+      "schedule": {
+        "enabled": true,
+        "days": ["Monday"],
+        "times": ["08:00"],
+        "localTimeZoneId": "W. Europe Standard Time",
+        "notifyOption": "MailOnFailure"
+      }
+    },
+    "right": {
+      "workspace_id": "10000000-0000-0000-0000-000000000002",
+      "id": "20000000-0000-0000-0000-000000000002",
+      "status": "observed",
+      "schedule": {
+        "enabled": true,
+        "days": ["Tuesday"],
+        "times": ["16:00"],
+        "localTimeZoneId": "W. Europe Standard Time",
+        "notifyOption": "MailOnFailure"
+      }
+    }
+  }
+}

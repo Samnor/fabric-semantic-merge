@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fabric-semantic-merge"
+dynamic = ["version"]
+description = "Plan, merge and migrate Fabric semantic models using Azure CLI authentication"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Samuel Norling"}]
+keywords = ["microsoft-fabric", "power-bi", "semantic-model", "migration", "dax"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Database",
+]
+
+[project.urls]
+Homepage = "https://github.com/Samnor/fabric-semantic-merge"
+Repository = "https://github.com/Samnor/fabric-semantic-merge"
+Documentation = "https://github.com/Samnor/fabric-semantic-merge/blob/main/README.md"
+Issues = "https://github.com/Samnor/fabric-semantic-merge/issues"
+Changelog = "https://github.com/Samnor/fabric-semantic-merge/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = ["build>=1.2,<2", "ruff==0.15.4", "twine>=6,<7"]
+
+[project.scripts]
+fabric-merge = "fabric_merge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["fabric_merge*"]
+namespaces = false
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = {attr = "fabric_merge.__version__"}
+
+[tool.ruff]
+target-version = "py311"

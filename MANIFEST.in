@@ -1,0 +1,17 @@
+include LICENSE README.md CHANGELOG.md CONTRIBUTING.md SECURITY.md AGENTS.md
+include pyproject.toml MANIFEST.in
+include .gitignore
+recursive-include src/fabric_merge *.py
+recursive-include tests *.py
+recursive-include docs *.md
+recursive-include examples *.json
+include formal/README.md formal/check.py formal/Migration.tla
+recursive-include scripts *.py
+prune runs
+prune dist
+prune build
+prune .git
+prune .venv
+prune formal/.tools
+prune formal/states
+global-exclude *.py[cod] .DS_Store .env .env.* .pypirc *.pem *.key

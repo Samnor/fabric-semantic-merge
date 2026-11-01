@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "disposable_compatibility_pilot_design",
+  "status": "not_admitted_or_executed",
+  "requires": ["CLI lab account access", "exact non-personal test workspace", "cohort-specific reviewed identities and bounds"],
+  "fixed_calibration_oracle": {"row_count": 2, "Quantity": 30, "Count": 2},
+  "calibration_source_definitions": ["examples/left-definition.json", "examples/right-definition.json"],
+  "cohorts": [
+    {"id": "import-calibration", "status": "blocked_cli_identity", "refresh_modes": ["auto", "standard"], "requires": ["two owned original models", "two disposable thin reports"], "proves_shared_capacity_compatibility": false},
+    {"id": "cloud-connection", "status": "inputs_required", "requires": ["reviewed existing test connection", "immutable fictional data and oracle"]},
+    {"id": "gateway", "status": "inputs_required", "requires": ["reviewed existing non-production gateway connection", "fictional read-only data and oracle"]},
+    {"id": "rls", "status": "inputs_required", "requires": ["reviewed restricted test identity", "roles and memberships", "effective-user result evidence"]},
+    {"id": "cross-workspace", "status": "inputs_required", "requires": ["second accessible non-personal test workspace", "owned disposable report there"]}
+  ],
+  "preservation": ["source/plan/evidence hashes", "existing connections and gateways", "production objects and schedules", "all unknown mutation intents"],
+  "cleanup": "Restore and verify report bindings before exact-ID owned-resource cleanup; one DELETE per identity, no unknown-outcome replay",
+  "live_workloads_submitted": 0
+}

@@ -1,0 +1,8 @@
+{
+  "model_id": "NEW_MERGED_MODEL_UUID_FROM_STAGE",
+  "workspace_id": "TARGET_WORKSPACE_UUID",
+  "security_policy_sha256": "SHA256_OF_CANONICAL_SECURITY_POLICY_FROM_PLAN",
+  "memberships_verified": false,
+  "reviewer": "",
+  "notes": "Configure target role memberships and test effective users before recording actual review. This is an operator attestation."
+}

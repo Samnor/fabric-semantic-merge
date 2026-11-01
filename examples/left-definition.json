@@ -1,0 +1,17 @@
+{
+  "definition": {
+    "format": "TMSL",
+    "parts": [
+      {
+        "path": "definition.pbism",
+        "payload": "eyJ2ZXJzaW9uIjogIjQuMCIsICJzZXR0aW5ncyI6IHt9fQ==",
+        "payloadType": "InlineBase64"
+      },
+      {
+        "path": "model.bim",
+        "payload": "eyJuYW1lIjogIlF1YW50aXR5IG1vZGVsIiwgImNvbXBhdGliaWxpdHlMZXZlbCI6IDE2MDAsICJtb2RlbCI6IHsiY3VsdHVyZSI6ICJlbi1VUyIsICJkZWZhdWx0UG93ZXJCSURhdGFTb3VyY2VWZXJzaW9uIjogInBvd2VyQklfVjMiLCAidGFibGVzIjogW3sibmFtZSI6ICJTYWxlcyIsICJjb2x1bW5zIjogW3sibmFtZSI6ICJWYWx1ZSIsICJkYXRhVHlwZSI6ICJpbnQ2NCIsICJzb3VyY2VDb2x1bW4iOiAiW1ZhbHVlXSJ9XSwgInBhcnRpdGlvbnMiOiBbeyJuYW1lIjogIlNhbGVzIiwgIm1vZGUiOiAiaW1wb3J0IiwgInNvdXJjZSI6IHsidHlwZSI6ICJjYWxjdWxhdGVkIiwgImV4cHJlc3Npb24iOiAiREFUQVRBQkxFKFwiVmFsdWVcIiwgSU5URUdFUiwge3sxMH0sIHsyMH19KSJ9fV0sICJtZWFzdXJlcyI6IFt7Im5hbWUiOiAiUXVhbnRpdHkiLCAiZXhwcmVzc2lvbiI6ICJTVU0oJ1NhbGVzJ1tWYWx1ZV0pIn1dfV19fQ==",
+        "payloadType": "InlineBase64"
+      }
+    ]
+  }
+}

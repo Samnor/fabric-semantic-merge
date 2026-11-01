@@ -1,0 +1,12 @@
+[
+  {
+    "name": "left:filtered-quantity",
+    "source": "left",
+    "query": "EVALUATE ROW(\"Value\", CALCULATE('Sales'[Quantity], 'Sales'[Value] > 10))"
+  },
+  {
+    "name": "right:filtered-count",
+    "source": "right",
+    "query": "EVALUATE ROW(\"Value\", CALCULATE('Sales'[Count], 'Sales'[Value] > 10))"
+  }
+]
