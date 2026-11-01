@@ -33,7 +33,7 @@ Issues = "https://github.com/Samnor/fabric-semantic-merge/issues"
 Changelog = "https://github.com/Samnor/fabric-semantic-merge/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
-dev = ["build>=1.2,<2", "ruff==0.15.4", "twine>=6,<7"]
+dev = ["build>=1.2,<2", "ruff==0.15.4", "twine>=6,<8"]
 
 [project.scripts]
 fabric-merge = "fabric_merge.cli:main"
